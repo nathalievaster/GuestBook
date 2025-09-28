@@ -33,6 +33,7 @@ namespace GuestBookApp
                 switch (choice)
                 {
                     case '1':
+                        Console.CursorVisible = true;
                         Console.Write("Ange namn: ");
                         string? user = Console.ReadLine();
 
@@ -51,6 +52,7 @@ namespace GuestBookApp
                         break;
 
                     case '2':
+                        Console.CursorVisible = true;
                         Console.Write("Ange index för inlägg att ta bort: ");
 
                         string? index = Console.ReadLine();
