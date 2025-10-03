@@ -12,16 +12,11 @@ namespace GuestBookApp
             while (true)
             {
                 Console.Clear();
-                Console.CursorVisible = false;
+                Console.CursorVisible = true;
                 Console.WriteLine("G Ä S T B O K");
                 Console.WriteLine("==============");
 
-                Console.WriteLine("1. Lägg till inlägg");
-                Console.WriteLine("2. Ta bort inlägg");
-                Console.WriteLine("X. Avsluta\n");
-
                 // Lista alla inlägg
-
                 i = 0;
                 foreach (Post post in guestBook.GetPosts())
                 {
@@ -29,9 +24,17 @@ namespace GuestBookApp
                     i++;
                 }
 
+                Console.WriteLine("\nVälj ett alternativ:");
+
+                Console.WriteLine("1. Lägg till inlägg");
+                Console.WriteLine("2. Ta bort inlägg");
+                Console.WriteLine("X. Avsluta\n");
+
+
                 int choice = (int)Console.ReadKey(true).Key;
                 switch (choice)
                 {
+                    // Om användaren trycker på 1
                     case '1':
                         Console.CursorVisible = true;
                         Console.Write("Ange namn: ");
@@ -50,7 +53,7 @@ namespace GuestBookApp
                             Console.ReadKey();
                         }
                         break;
-
+                    // Om användaren trycker på 2
                     case '2':
                         Console.CursorVisible = true;
                         Console.Write("Ange index för inlägg att ta bort: ");
@@ -74,6 +77,7 @@ namespace GuestBookApp
                             }
                         }
                         break;
+                    // Om användaren trycker på X
                     case 88: // X
                         Environment.Exit(0);
                         break;

@@ -1,6 +1,14 @@
 [
   {
     "User": "Nathalie",
-    "Message": "Hello, world!"
+    "Message": "Hejsan!"
+  },
+  {
+    "User": "Nathalie igen",
+    "Message": "Hall\u00E5 igen!"
+  },
+  {
+    "User": "Eric",
+    "Message": "Testar jag med"
   }
 ]
